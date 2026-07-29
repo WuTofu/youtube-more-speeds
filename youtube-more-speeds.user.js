@@ -2,14 +2,14 @@
 // @version      1.0.0
 // @name         YouTubeMoreSpeeds
 // @description  Adds buttons under a YouTube video with more playback speeds.
-// @namespace    https://github.com/SharpRoma
+// @namespace    https://github.com/WuTofu
 // @icon https://www.youtube.com/s/desktop/3748dff5/img/favicon_48.png
 // @author       SharpRoma
-// @homepage https://github.com/SharpRoma/youtube-more-speeds
+// @homepage https://github.com/WuTofu/youtube-more-speeds
 // @match        *://*.youtube.com/*
 // @license MIT
-// @downloadURL https://update.greasyfork.org/scripts/504496/YouTubeMoreSpeeds.user.js
-// @updateURL https://update.greasyfork.org/scripts/504496/YouTubeMoreSpeeds.meta.js
+// @downloadURL https://cdn.jsdelivr.net/gh/WuTofu/youtube-more-speeds@edit/main/youtube-more-speeds.user.js
+// @updateURL https://cdn.jsdelivr.net/gh/WuTofu/youtube-more-speeds@edit/main/youtube-more-speeds.user.js
 // ==/UserScript==
 
 
