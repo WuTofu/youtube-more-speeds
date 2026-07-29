@@ -8,6 +8,8 @@
 // @homepage https://github.com/SharpRoma/youtube-more-speeds
 // @match        *://*.youtube.com/*
 // @license MIT
+// @downloadURL https://update.greasyfork.org/scripts/504496/YouTubeMoreSpeeds.user.js
+// @updateURL https://update.greasyfork.org/scripts/504496/YouTubeMoreSpeeds.meta.js
 // ==/UserScript==
 
 
@@ -44,13 +46,13 @@
     }
     
     let funcDone = false;
-    const titleElemSelector = 'div#title.style-scope.ytd-watch-metadata';
+    const playerElemSelector = '#player';
     const colors = ['#072525', '#287F54', '#C22544'];
 
     if (!funcDone) window.addEventListener('yt-navigate-start', addSpeeds);
 
     if (document.body && !funcDone) {
-        waitForKeyElements(titleElemSelector, addSpeeds);
+        waitForKeyElements(playerElemSelector, addSpeeds);
     }
 
     function addSpeeds() {
@@ -59,6 +61,7 @@
         const bgColor = colors[0];
         const moreSpeedsDiv = document.createElement('div');
         moreSpeedsDiv.id = 'more-speeds';
+        moreSpeedsDiv.style.marginTop = '8px';
 
         for (let i = 1; i < 4.25; i += 0.25) {
             const btn = document.createElement('button');
@@ -77,9 +80,9 @@
             moreSpeedsDiv.appendChild(btn);
         }
 
-        const titleElem = document.querySelector(titleElemSelector);
-        if (titleElem) {
-            titleElem.after(moreSpeedsDiv);
+        const playerElem = document.querySelector(playerElemSelector);
+        if (playerElem) {
+            playerElem.after(moreSpeedsDiv);
         }
 
         restoreSpeed();
